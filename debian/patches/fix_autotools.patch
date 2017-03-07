@@ -1,0 +1,12 @@
+diff --git a/configure.ac b/configure.ac
+index 0762dfe..f1a51cb 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -1,6 +1,6 @@
+ AC_INIT([monodevelop], m4_esyscmd_s([grep ^Version version.config|cut -d '=' -f 2|tr -d '\n']), [monodevelop-list@lists.ximian.com])
+ AC_PREREQ(2.53)
+-AM_INIT_AUTOMAKE([1.10 tar-ustar])
++AM_INIT_AUTOMAKE([foreign 1.10 tar-ustar])
+ AM_MAINTAINER_MODE
+ 
+ #capture aclocal flags for autoreconf

@@ -1,3 +1,4 @@
 fix_autoreconf.patch
 no_appmenu
 fix_makefile.patch
+fix_autotools.patch
