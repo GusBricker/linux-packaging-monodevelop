@@ -20,11 +20,6 @@ override_dh_auto_configure:
 
 override_dh_auto_clean:
 	dh_auto_clean
-	find external/ -name "*.dll" -delete
-	find external/ -name "*.exe" -delete
-	find external/ -name "*.mdb" -delete
-	find external/ -name "*.FilesWrittenAbsolute.txt" -delete
-	rm -f external/ngit/NGit/obj/Debug/NGit.resources.JGitText.properties
 
 override_dh_auto_build:
 	cd ./external/libgit2sharp/Lib/CustomBuildTasks && xbuild CustomBuildTasks.csproj && mv bin/Debug/* .
