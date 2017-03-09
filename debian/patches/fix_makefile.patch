@@ -1,0 +1,13 @@
+diff --git a/Makefile.am b/Makefile.am
+index ec59c6d..fd4d88e 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -5,7 +5,7 @@ SUBDIRS = external . contrib src po man theme-icons build tests
+ MD_CONFIGURE=$(top_srcdir)/../scripts/configure.sh
+ 
+ #capture aclocal flags for autoreconf
+-ACLOCAL_AMFLAGS=$(ACLOCAL_FLAGS)
++ACLOCAL_AMFLAGS=-I /usr/share/aclocal
+ 
+ bin_SCRIPTS = monodevelop mdtool
+ 
