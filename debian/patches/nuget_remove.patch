@@ -1,0 +1,28 @@
+diff --git a/Makefile.am b/Makefile.am
+index e5ee9ed..9d402f5 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -13,7 +13,7 @@ buildinfo = $(top_builddir)/build/bin/buildinfo
+ 
+ all: vcrevision
+ 
+-all-local: vcrevision restore-packages sln_build
++all-local: vcrevision sln_build
+ 
+ clean: clean-local
+ 
+@@ -21,14 +21,6 @@ clean-local: sln_clean
+ 	cd external && $(MAKE) clean
+ 	cd build && $(MAKE) clean
+ 
+-NUGET_FOUND = $$(echo $$(which nuget))
+-NUGET_RESTORE = mono external/nuget-binary/nuget.exe restore;
+-
+-#FIXME: move the restore logic into MSBuild (Before.sln.targets),
+-#       see: https://github.com/kzu/NuGet.Restore
+-restore-packages:
+-	@$(NUGET_RESTORE)
+-
+ vcrevision:
+ 	touch vcrevision
+ 
